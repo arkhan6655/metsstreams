@@ -22,15 +22,17 @@ fetch(apiURL)
         let row = document.createElement("tr");
 
         row.innerHTML = `
-          <td>${formatTime(event.unix_timestamp)}</td>
-          <td>${event.sport}</td>
-          <td>${event.tournament}</td>
-          <td>${event.match}</td>
-          <td><a class="watch-btn" target="_blank" 
+  <td>${formatTime(event.unix_timestamp)}</td>
+  <td>${event.sport}</td>
+  <td>${event.tournament}</td>
+  <td>${event.match}</td>
+  <td>
+    <a class="watch-btn" target="_blank" 
        href="https://arkhan648.github.io/streams/?id=${event.unix_timestamp}_${idx}">
        Watch
-    </a></td>
-        `;
+    </a>
+  </td>
+`;
 
         matchesBody.appendChild(row);
 
@@ -43,6 +45,7 @@ fetch(apiURL)
     matchesBody.innerHTML = `<tr><td colspan="5">⚠ Error loading matches</td></tr>`;
     console.error(err);
   });
+
 
 
 

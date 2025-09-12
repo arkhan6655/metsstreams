@@ -16,27 +16,27 @@ header {
 }
 
 header h1 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   letter-spacing: 1px;
 }
 
-/* Table container with horizontal scroll */
+/* Table container */
 .table-container {
   width: 95%;
-  margin: 1rem auto;
-  overflow-x: auto; /* Enables horizontal scroll on small devices */
+  margin: 2rem auto;
+  overflow-x: hidden; /* hide scroll */
 }
 
 table {
   width: 100%;
-  min-width: 700px; /* Ensures table looks good on desktops */
   border-collapse: collapse;
   background: #fff;
   border-radius: 10px;
-  overflow: hidden;
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  table-layout: fixed; /* important for responsive column widths */
 }
 
+/* Table headers */
 th {
   background: #0077cc;
   color: #fff;
@@ -44,21 +44,21 @@ th {
   padding: 12px;
   text-transform: uppercase;
   font-size: 0.95rem;
+  word-wrap: break-word;
+  text-align: center;
 }
 
+/* Table cells */
 td {
   padding: 12px;
-  text-align: left;
+  text-align: center;
   border-bottom: 1px solid #e0e0e0;
   font-size: 0.9rem;
-  word-wrap: break-word;
+  word-wrap: break-word; /* wrap long text */
+  overflow-wrap: break-word;
 }
 
-tr:last-child td {
-  border-bottom: none;
-}
-
-/* Zebra and hover effect */
+/* Zebra & hover effect */
 tbody tr:nth-child(even) {
   background: #f9f9f9;
 }
@@ -73,13 +73,14 @@ tbody tr:hover {
 a.watch-btn {
   background: #28a745;
   color: white;
-  padding: 8px 15px;
+  padding: 6px 10px;
   border-radius: 50px;
   text-decoration: none;
   font-weight: 500;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   transition: all 0.3s ease;
   display: inline-block;
+  word-wrap: normal;
 }
 
 a.watch-btn:hover {
@@ -96,21 +97,15 @@ footer {
   margin-top: 2rem;
 }
 
-/* Make table responsive without hiding columns */
+/* Mobile adjustments */
 @media (max-width: 768px) {
-  table {
-    min-width: 0;
-    font-size: 0.65rem;
-  }
-
   th, td {
-    padding: 0px;
+    font-size: 10px;
+    padding: 4px 2px;
   }
 
   a.watch-btn {
-    padding: 4px 7px;
-    font-size: 0.65rem;
+    padding: 3px 6px;
+    font-size: 10px;
   }
 }
-
-

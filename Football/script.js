@@ -17,12 +17,22 @@ function formatTime(unix) {
 // Keyword filter
 const keyword = "Football";
 
+// Current timestamp in seconds
+const now = Math.floor(Date.now() / 1000);
+// 5 hours in seconds
+const fiveHours = 5 * 60 * 60;
+
 fetch(apiURL)
   .then(res => res.json())
   .then(data => {
     let count = 0;
     for (const date in data.events) {
       data.events[date].forEach((event, idx) => {
+        // Skip matches that started more than 5 hours ago
+        if (event.unix_timestamp < now - fiveHours) {
+          return;
+        }
+
         // Check if keyword matches sport or tournament (case-insensitive)
         if (
           (event.sport && event.sport.toLowerCase() === keyword.toLowerCase()) ||
@@ -57,5 +67,3 @@ fetch(apiURL)
     matchesBody.innerHTML = `<tr><td colspan="5">⚠ Error loading matches</td></tr>`;
     console.error(err);
   });
-
-

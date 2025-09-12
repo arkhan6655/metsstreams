@@ -16,14 +16,14 @@ header {
 }
 
 header h1 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   letter-spacing: 1px;
 }
 
 /* Table container with horizontal scroll */
 .table-container {
   width: 95%;
-  margin: 2rem auto;
+  margin: 1rem auto;
   overflow-x: auto; /* Enables horizontal scroll on small devices */
 }
 
@@ -100,16 +100,17 @@ footer {
 @media (max-width: 768px) {
   table {
     min-width: 0;
-    font-size: 0.85rem;
+    font-size: 0.65rem;
   }
 
   th, td {
-    padding: 5px;
+    padding: 0px;
   }
 
   a.watch-btn {
-    padding: 6px 10px;
-    font-size: 0.85rem;
+    padding: 4px 7px;
+    font-size: 0.65rem;
   }
 }
+
 

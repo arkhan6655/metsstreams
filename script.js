@@ -26,7 +26,7 @@ fetch(apiURL)
           <td>${event.sport}</td>
           <td>${event.tournament}</td>
           <td>${event.match}</td>
-          <td><a class="watch-btn" target="_blank" href="https://arkhan648.github.io/streams/"?id=${event.unix_timestamp}_${idx}">Watch</a></td>
+          <td><a class="watch-btn" target="_blank" href="https://arkhan648.github.io/streams/?id=${event.unix_timestamp}_${idx}">Watch</a></td>
         `;
 
         matchesBody.appendChild(row);
@@ -40,4 +40,5 @@ fetch(apiURL)
     matchesBody.innerHTML = `<tr><td colspan="5">⚠ Error loading matches</td></tr>`;
     console.error(err);
   });
+
 

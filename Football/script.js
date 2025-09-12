@@ -15,7 +15,7 @@ function formatTime(unix) {
 }
 
 // Keyword filter
-const keyword = "NFL";
+const keyword = "Football";
 
 fetch(apiURL)
   .then(res => res.json())
@@ -57,4 +57,5 @@ fetch(apiURL)
     matchesBody.innerHTML = `<tr><td colspan="5">⚠ Error loading matches</td></tr>`;
     console.error(err);
   });
+
 

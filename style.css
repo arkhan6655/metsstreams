@@ -48,7 +48,7 @@ th {
 
 td {
   padding: 12px;
-  text-align: center;
+  text-align: left;
   border-bottom: 1px solid #e0e0e0;
   font-size: 0.9rem;
   word-wrap: break-word;
@@ -104,7 +104,7 @@ footer {
   }
 
   th, td {
-    padding: 8px;
+    padding: 5px;
   }
 
   a.watch-btn {
@@ -112,3 +112,4 @@ footer {
     font-size: 0.85rem;
   }
 }
+

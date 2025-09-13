@@ -15,7 +15,7 @@ function formatTime(unix) {
 }
 
 // Keyword filter
-const keyword = "Aussie rules";
+const keyword = "Aussie";
 
 fetch(apiURL)
   .then(res => res.json())
@@ -23,10 +23,10 @@ fetch(apiURL)
     let count = 0;
     for (const date in data.events) {
       data.events[date].forEach((event, idx) => {
-        // Check if keyword matches sport or tournament (case-insensitive)
+        // Check if keyword is contained in sport or tournament (case-insensitive)
         if (
-          (event.sport && event.sport.toLowerCase() === keyword.toLowerCase()) ||
-          (event.tournament && event.tournament.toLowerCase() === keyword.toLowerCase())
+          (event.sport && event.sport.toLowerCase().includes(keyword.toLowerCase())) ||
+          (event.tournament && event.tournament.toLowerCase().includes(keyword.toLowerCase()))
         ) {
           let row = document.createElement("tr");
 

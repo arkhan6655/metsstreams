@@ -57,4 +57,3 @@ fetch(apiURL)
     matchesBody.innerHTML = `<tr><td colspan="5">⚠ Error loading matches</td></tr>`;
     console.error(err);
   });
-

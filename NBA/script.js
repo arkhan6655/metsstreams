@@ -50,10 +50,11 @@ fetch(apiURL)
     }
 
     if(count === 0){
-      matchesBody.innerHTML = `<tr><td colspan="5">⚠ No Football matches available.</td></tr>`;
+      matchesBody.innerHTML = `<tr><td colspan="5">⚠ No matches available.</td></tr>`;
     }
   })
   .catch(err => {
     matchesBody.innerHTML = `<tr><td colspan="5">⚠ Error loading matches</td></tr>`;
     console.error(err);
   });
+

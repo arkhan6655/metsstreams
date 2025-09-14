@@ -122,7 +122,7 @@ header {
     box-shadow: 0 0 0px rgba(255, 102, 0, 0.7);
   }
   50% {
-    box-shadow: 0 0 15px rgba(255, 102, 0, 0.9), 0 0 30px rgba(255, 102, 0, 0.6);
+    box-shadow: 0 0 10px rgba(255, 102, 0, 0.9), 0 0 10px rgba(255, 102, 0, 0.6);
   }
   100% {
     box-shadow: 0 0 0px rgba(255, 102, 0, 0.7);
@@ -528,3 +528,4 @@ section h2 {
     font-size: 13px;
   }
 }
+

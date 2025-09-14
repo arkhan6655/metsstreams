@@ -336,4 +336,73 @@ footer {
   to { opacity: 1; transform: translateY(0); }
 }
 
+ /* Categories Container */
+.categories-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+section {
+  margin-bottom: 2.5rem;
+}
+section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #ff9800;
+  border-left: 4px solid #ff9800;
+  padding-left: 10px;
+}
+
+/* Categories Grid */
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1rem;
+}
+.categories-grid a {
+  display: block;
+  padding: 0.8rem 1rem;
+  background: #1c1c1c;
+  border-radius: 10px;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+}
+.categories-grid a:hover {
+  background: #ff9800;
+  color: #111;
+  transform: translateY(-3px);
+}
+
+
+/* Bottom Schedule Button Container */
+.schedule-btn-container {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+/* Bottom Schedule Button */
+.schedule-btn {
+  display: inline-block;
+  background: #ff6600;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  animation: pulseGlow 2s infinite;
+}
+
+/* Hover effect */
+.schedule-btn:hover {
+background: #ff8533;
+  color: #fff;
+  transform: scale(1.05);
+}
+
 

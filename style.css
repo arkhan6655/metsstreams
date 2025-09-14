@@ -501,7 +501,7 @@ background: #ff8533;
   background: #fff;
   color: #111;
   transform: scale(1.1);
-  box-shadow: 0 0 18px rgba(255,255,255,0.9);
+  
 }
 
 /* Close Button */
@@ -540,6 +540,7 @@ background: #ff8533;
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+
 
 
 

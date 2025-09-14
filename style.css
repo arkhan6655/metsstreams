@@ -1,11 +1,10 @@
 /* Base */
 body {
   margin: 0;
-  font-family: arial;
-	line-height: 1.5;
- background: #111;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  background: #111;
   color: #fff;
-  
 }
 
 /* ====== SITE TITLE SECTION ====== */
@@ -33,18 +32,16 @@ header {
   justify-content: center;
 }
 
-
-/* Default header (normal flow) */
+/* Default header */
 .main-header {
   background: #000;
-  padding: 10px 20px; /* top right bottom left */
+  padding: 10px 20px;
   display: flex;
   justify-content: center;
   transition: all 0.3s ease;
-
 }
 
-/* Sticky state (added via JS) */
+/* Sticky header */
 .main-header.sticky {
   position: fixed;
   top: 0;
@@ -54,12 +51,10 @@ header {
   box-shadow: 0 2px 6px rgba(0,0,0,0.4);
 }
 
-
-
 /* Base Nav Menu */
 .nav-menu {
   display: flex;
-  flex-wrap: nowrap; /* Prevent wrapping */
+  flex-wrap: nowrap;
   gap: 10px;
   list-style: none;
   margin: 0;
@@ -69,11 +64,11 @@ header {
 }
 
 .nav-menu li.menu-item {
-  flex-shrink: 1; /* Allow menu items to shrink if needed */
+  flex-shrink: 1;
 }
 
 .nav-menu li.more-btn {
-  flex-shrink: 0; /* Keep More button visible */
+  flex-shrink: 0;
 }
 
 /* Links */
@@ -101,10 +96,10 @@ header {
 
 /* Visited Link */
 .nav-menu li a:visited {
-  color: #bbb; /* subtle difference */
+  color: #bbb;
 }
 
-/* Schedule (More Button) Animation */
+/* More Button */
 .more-btn a {
   font-weight: 700;
   color: #fff;
@@ -112,7 +107,6 @@ header {
   padding: 6px 14px;
   border-radius: 6px;
   position: relative;
-  overflow: hidden;
   animation: pulseGlow 2s infinite;
   transition: all 0.3s ease;
 }
@@ -137,10 +131,11 @@ header {
 
 /* ====== FOOTER ====== */
 footer {
-  background: #000;
-  color: #aaa;
+  background: #222;
+  color: #fff;
   text-align: center;
-  padding: 20px 10px;
+  padding: 1rem;
+  margin-top: 2rem;
 }
 
 .footer-menu {
@@ -162,9 +157,8 @@ footer {
   color: #ffcc00;
 }
 
-footer p{
-
-	padding-bottom:30px;
+footer p {
+  padding-bottom: 30px;
 }
 
 /* ====== RESPONSIVE ====== */
@@ -177,65 +171,34 @@ footer p{
     font-size: 16px;
   }
 
-
-
   header {
     justify-content: center;
     padding: 8px 10px;
   }
   
- .nav-menu {
-  flex-wrap: nowrap; /* Prevent wrapping */
-  overflow-x: auto;  /* Allow scrolling if items too long */
-  -webkit-overflow-scrolling: touch; /* smooth scroll on iOS */
-  padding: 5px 8px; /* extra space so glow is not cut off */
-}
+  .nav-menu {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 5px 8px;
+  }
 
   .nav-menu li a {
     font-size: 14px;
     padding: 2px 2px;
-    white-space: nowrap; /* Prevent line break */
+    white-space: nowrap;
   }
   
-  /* Schedule (More Button) Animation */
-.more-btn a {
-  font-weight: 700;
-  color: #fff;
-  background: #ff6600;
-  padding: 3px 7px;
-  border-radius: 6px;
-  position: relative;
-  /* overflow: hidden;  <-- REMOVE this */
-  animation: pulseGlow 2s infinite;
-  transition: all 0.3s ease;
-}
-
-
-/* Pulse Glow Animation */
-@keyframes pulseGlow {
-  0% {
-    box-shadow: 0 0 0px rgba(255, 102, 0, 0.5);
-  }
-  50% {
-    box-shadow: 0 0 6px rgba(255, 102, 0, 0.9), 
-                0 0 10px rgba(255, 102, 0, 0.6);
-  }
-  100% {
-    box-shadow: 0 0 0px rgba(255, 102, 0, 0.5);
+  .more-btn a {
+    padding: 3px 7px;
   }
 }
 
-
-  
+/* Content Section */
+.contentsection {
+  padding: 20px;
+  margin: 20px auto;
 }
-
-  
-  .contentsection {
-	  
-	  padding: 20px;
-	  margin: 20px auto;
-	  
-  }
 
 /* Table container */
 .table-container {
@@ -256,7 +219,6 @@ table {
   overflow: hidden;
 }
 
-/* Table headers */
 th {
   background: #000;
   color: #fff;
@@ -267,7 +229,6 @@ th {
   text-align: center;
 }
 
-/* Table cells */
 td {
   padding: 12px;
   text-align: center;
@@ -275,10 +236,8 @@ td {
   font-size: 0.9rem;
   word-wrap: break-word;
   overflow-wrap: break-word;
-	
 }
 
-/* Zebra & hover effect */
 tbody tr:nth-child(even) {
   background: #1e1e1e;
 }
@@ -289,7 +248,6 @@ tbody tr:hover {
   transition: all 0.2s ease-in-out;
 }
 
-/* Watch button */
 a.watch-btn {
   background: #28a745;
   color: white;
@@ -300,22 +258,11 @@ a.watch-btn {
   font-size: 0.85rem;
   transition: all 0.3s ease;
   display: inline-block;
-  word-wrap: normal;
 }
 
 a.watch-btn:hover {
   background: #ff4500;
   transform: scale(1.05);
-}
-
-/* Footer */
-footer {
-  background: #222;
-  color: #fff;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
-  
 }
 
 /* Loader */
@@ -342,7 +289,7 @@ footer {
   100% { transform: rotate(360deg); }
 }
 
-/* Mobile adjustments */
+/* Mobile table adjustments */
 @media (max-width: 768px) {
   th, td {
     font-size: 11px;
@@ -366,15 +313,17 @@ footer {
   to { opacity: 1; transform: translateY(0); }
 }
 
- /* Categories Container */
+/* Categories */
 .categories-container {
   width: 90%;
   max-width: 1200px;
   margin: 2rem auto;
 }
+
 section {
   margin-bottom: 2.5rem;
 }
+
 section h2 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
@@ -383,12 +332,12 @@ section h2 {
   padding-left: 10px;
 }
 
-/* Categories Grid */
 .categories-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   gap: 1rem;
 }
+
 .categories-grid a {
   display: block;
   padding: 0.8rem 1rem;
@@ -401,20 +350,19 @@ section h2 {
   transition: all 0.3s ease;
   box-shadow: 0 3px 6px rgba(0,0,0,0.3);
 }
+
 .categories-grid a:hover {
   background: #ff9800;
   color: #111;
   transform: translateY(-3px);
 }
 
-
-/* Bottom Schedule Button Container */
+/* Schedule Button */
 .schedule-btn-container {
   text-align: center;
   margin: 2rem 0;
 }
 
-/* Bottom Schedule Button */
 .schedule-btn {
   display: inline-block;
   background: #ff6600;
@@ -428,22 +376,17 @@ section h2 {
   animation: pulseGlow 2s infinite;
 }
 
-/* Hover effect */
 .schedule-btn:hover {
-background: #ff8533;
-  color: #fff;
+  background: #ff8533;
   transform: scale(1.05);
 }
 
-
-/* Ad Container Styling */
-/* Sticky Ad Container */
+/* Sticky Ad */
 #sticky-footer-ad {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  max-width: 100vw;
   background: linear-gradient(270deg, #ff5e00, #ff8c00, #ff5e00);
   background-size: 600% 600%;
   animation: gradientShift 8s ease infinite;
@@ -458,27 +401,21 @@ background: #ff8533;
   overflow: hidden;
 }
 
-/* Content */
 .ad-content {
   display: flex;
   align-items: center;
   gap: 8px;
   flex-wrap: nowrap;
   text-align: center;
-  max-width: 100%;
-  overflow: hidden;
   justify-content: center;
   padding: 0px 20px;
 }
 
-
-/* Emoji */
 .emoji {
   font-size: 24px;
   animation: bounce 1s infinite;
 }
 
-/* CTA Text */
 .cta-text {
   font-size: 16px;
   font-weight: bold;
@@ -489,7 +426,6 @@ background: #ff8533;
   text-overflow: ellipsis;
 }
 
-/* Download Button */
 .download-btn {
   background: #111;
   color: #fff;
@@ -498,18 +434,16 @@ background: #ff8533;
   font-size: 16px;
   font-weight: bold;
   text-decoration: none;
-  
   transition: all 0.3s ease;
   animation: buttonPulse 1.5s infinite alternate;
 }
+
 .download-btn:hover {
   background: #fff;
   color: #111;
   transform: scale(1.1);
-  
 }
 
-/* Close Button */
 #close-ad {
   position: absolute;
   top: 3px;
@@ -524,28 +458,30 @@ background: #ff8533;
   transition: 0.3s;
   margin-right: 20px;
 }
+
 #close-ad:hover { background: #ff0000; }
 
-/* Animations */
 @keyframes bounce {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-6px); }
 }
+
 @keyframes pulseText {
   0%, 100% { color: #fff; }
   50% { color: #ffeb3b; }
 }
+
 @keyframes buttonPulse {
   0% { transform: scale(1);}
   50% { transform: scale(1.08);}
   100% { transform: scale(1);}
 }
+
 @keyframes gradientShift {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
-
 
 /* ===== DISCLAIMER BOX ===== */
 .disclaimer-box {
@@ -574,7 +510,7 @@ background: #ff8533;
   margin: 0;
   font-size: 14px;
   line-height: 1.5;
-	padding-bottom: 10px !important;
+  padding-bottom: 10px !important;
 }
 
 .disclaimer-box a {
@@ -586,32 +522,9 @@ background: #ff8533;
   color: #fff;
 }
 
-/* Keep responsive look */
 @media (max-width: 768px) {
   .disclaimer-box {
     padding: 12px 15px;
     font-size: 13px;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

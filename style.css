@@ -222,7 +222,7 @@ table {
   width: 100%;
   border-collapse: collapse;
   background: #04211d;
-  
+  margin-top: 10px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
   table-layout: fixed;
   overflow: hidden;
@@ -230,7 +230,7 @@ table {
 
 /* Table headers */
 th {
-  background: #2e6c6d;
+  background: #141c1c;
   color: #fff;
   font-weight: 600;
   padding: 12px;
@@ -256,7 +256,7 @@ tbody tr:nth-child(even) {
 }
 
 tbody tr:hover {
-  background: #e6f7ff;
+  background: #040404;
   transform: scale(1.01);
   transition: all 0.2s ease-in-out;
 }
@@ -406,6 +406,7 @@ background: #ff8533;
   color: #fff;
   transform: scale(1.05);
 }
+
 
 
 

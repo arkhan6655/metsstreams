@@ -17,17 +17,27 @@ function formatTime(unix) {
 // Keyword filter
 const keyword = "AFL";
 
+// Time filter (6 hours)
+const now = Math.floor(Date.now() / 1000); // current time in seconds
+const cutoff = 6 * 60 * 60; // 6 hours in seconds
+
 fetch(apiURL)
   .then(res => res.json())
   .then(data => {
     let count = 0;
+
     for (const date in data.events) {
       data.events[date].forEach((event, idx) => {
-        // Check if keyword is contained in sport or tournament (case-insensitive)
-        if (
+        
+        // Only show if keyword matches
+        const keywordMatch =
           (event.sport && event.sport.toLowerCase().includes(keyword.toLowerCase())) ||
-          (event.tournament && event.tournament.toLowerCase().includes(keyword.toLowerCase()))
-        ) {
+          (event.tournament && event.tournament.toLowerCase().includes(keyword.toLowerCase()));
+        
+        // Only show if upcoming or started within last 6 hours
+        const timeMatch = event.unix_timestamp + cutoff > now;
+
+        if (keywordMatch && timeMatch) {
           let row = document.createElement("tr");
 
           row.innerHTML = `
@@ -49,7 +59,7 @@ fetch(apiURL)
       });
     }
 
-    if(count === 0){
+    if (count === 0) {
       matchesBody.innerHTML = `<tr><td colspan="5">⚠ No matches available.</td></tr>`;
     }
   })
@@ -57,4 +67,3 @@ fetch(apiURL)
     matchesBody.innerHTML = `<tr><td colspan="5">⚠ Error loading matches</td></tr>`;
     console.error(err);
   });
-

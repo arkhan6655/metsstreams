@@ -542,6 +542,52 @@ background: #ff8533;
 }
 
 
+/* ===== DISCLAIMER BOX ===== */
+.disclaimer-box {
+  background: #111;
+  color: #ddd;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+.disclaimer-box h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  color: #ffcc00;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.disclaimer-box p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.disclaimer-box a {
+  color: #ffcc00;
+  text-decoration: underline;
+}
+
+.disclaimer-box a:hover {
+  color: #fff;
+}
+
+/* Keep responsive look */
+@media (max-width: 768px) {
+  .disclaimer-box {
+    padding: 12px 15px;
+    font-size: 13px;
+  }
+}
+
 
 
 

@@ -140,7 +140,7 @@ footer {
   background: #000;
   color: #aaa;
   text-align: center;
-  padding: 20px 10px 20px 100px;
+  padding: 20px 10px;
 }
 
 .footer-menu {
@@ -160,6 +160,11 @@ footer {
 
 .footer-menu a:hover {
   color: #ffcc00;
+}
+
+footer p{
+
+	padding-bottom:30px;
 }
 
 /* ====== RESPONSIVE ====== */
@@ -569,6 +574,7 @@ background: #ff8533;
   margin: 0;
   font-size: 14px;
   line-height: 1.5;
+	padding-bottom: 10px !important;
 }
 
 .disclaimer-box a {
@@ -587,6 +593,7 @@ background: #ff8533;
     font-size: 13px;
   }
 }
+
 
 
 

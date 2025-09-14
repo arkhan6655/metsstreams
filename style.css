@@ -247,6 +247,7 @@ td {
   font-size: 0.9rem;
   word-wrap: break-word;
   overflow-wrap: break-word;
+	color: black;
 }
 
 /* Zebra & hover effect */
@@ -405,6 +406,7 @@ background: #ff8533;
   color: #fff;
   transform: scale(1.05);
 }
+
 
 
 

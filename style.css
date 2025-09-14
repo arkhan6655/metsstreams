@@ -221,7 +221,7 @@ footer {
 table {
   width: 100%;
   border-collapse: collapse;
-  background: #fff;
+  background: #04211d;
   
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
   table-layout: fixed;
@@ -247,12 +247,12 @@ td {
   font-size: 0.9rem;
   word-wrap: break-word;
   overflow-wrap: break-word;
-	color: black;
+	
 }
 
 /* Zebra & hover effect */
 tbody tr:nth-child(even) {
-  background: #f9f9f9;
+  background: #04140c;
 }
 
 tbody tr:hover {
@@ -406,6 +406,7 @@ background: #ff8533;
   color: #fff;
   transform: scale(1.05);
 }
+
 
 
 

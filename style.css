@@ -1,7 +1,7 @@
 /* Base */
 body {
   margin: 0;
-  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
   background: #f0f2f5;
   color: #333;
   line-height: 1.5;
@@ -335,4 +335,5 @@ footer {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
 

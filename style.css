@@ -187,7 +187,7 @@ footer {
 }
 
   .nav-menu li a {
-    font-size: 14px;
+    font-size: 16px;
     padding: 2px 5px;
     white-space: nowrap; /* Prevent line break */
   }
@@ -429,6 +429,7 @@ background: #ff8533;
   color: #fff;
   transform: scale(1.05);
 }
+
 
 
 

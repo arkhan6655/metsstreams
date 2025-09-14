@@ -243,7 +243,7 @@ th {
 td {
   padding: 12px;
   text-align: center;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid #111;
   font-size: 0.9rem;
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -406,6 +406,7 @@ background: #ff8533;
   color: #fff;
   transform: scale(1.05);
 }
+
 
 
 

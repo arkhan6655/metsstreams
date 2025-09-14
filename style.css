@@ -1,3 +1,12 @@
+/* Base */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f2f5;
+  color: #333;
+  line-height: 1.5;
+}
+
 /* ====== SITE TITLE SECTION ====== */
 .site-title-section {
   text-align: center;

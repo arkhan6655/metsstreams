@@ -33,6 +33,28 @@ header {
   justify-content: center;
 }
 
+
+/* Default header (normal flow) */
+.main-header {
+  background: #000;
+  padding: 4px 20px;
+  display: flex;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+/* Sticky state (added via JS) */
+.main-header.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #111;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+
+
 /* Base Nav Menu */
 .nav-menu {
   display: flex;
@@ -406,6 +428,7 @@ background: #ff8533;
   color: #fff;
   transform: scale(1.05);
 }
+
 
 
 

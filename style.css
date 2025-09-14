@@ -1,48 +1,229 @@
-body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f0f2f5;
-  color: #333;
-  line-height: 1.5;
-}
-
-/* Header */
-header {
-  background: linear-gradient(90deg, #222, #444);
-  color: #fff;
+/* ====== SITE TITLE SECTION ====== */
+.site-title-section {
   text-align: center;
-  padding: 1.5rem 1rem;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  padding: 12px 10px;
+  background: linear-gradient(135deg, #ffcc00, #ff4747);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
 }
 
-header h1 {
-  font-size: 1.8rem;
-  letter-spacing: 1px;
+.site-title-section h1 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+  color: #fff;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+  letter-spacing: 0.5px;
 }
+
+/* ====== HEADER MENUS ====== */
+header {
+  background: #000;
+  padding: 8px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Base Nav Menu */
+.nav-menu {
+  display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping */
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-menu li.menu-item {
+  flex-shrink: 1; /* Allow menu items to shrink if needed */
+}
+
+.nav-menu li.more-btn {
+  flex-shrink: 0; /* Keep More button visible */
+}
+
+/* Links */
+.nav-menu li a {
+  color: #ddd;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.nav-menu li a:hover {
+  background: #ff4747;
+  color: #fff;
+}
+
+/* Active Menu Item */
+.nav-menu li a.active {
+  background: #ff4747;
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 0 8px rgba(255, 71, 71, 0.6);
+}
+
+/* Visited Link */
+.nav-menu li a:visited {
+  color: #bbb; /* subtle difference */
+}
+
+/* Schedule (More Button) Animation */
+.more-btn a {
+  font-weight: 700;
+  color: #fff;
+  background: #ff6600;
+  padding: 6px 14px;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  animation: pulseGlow 2s infinite;
+  transition: all 0.3s ease;
+}
+
+.more-btn a:hover {
+  background: #ff8533;
+  color: #111;
+}
+
+/* Pulse Glow Animation */
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 0px rgba(255, 102, 0, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(255, 102, 0, 0.9), 0 0 30px rgba(255, 102, 0, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 0px rgba(255, 102, 0, 0.7);
+  }
+}
+
+/* ====== FOOTER ====== */
+footer {
+  background: #000;
+  color: #aaa;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.footer-menu {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer-menu a {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-menu a:hover {
+  color: #ffcc00;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+  .site-title-section {
+    padding: 7px 8px;
+  }
+
+  .site-title-section h1 {
+    font-size: 16px;
+  }
+
+
+
+  header {
+    justify-content: center;
+    padding: 8px 10px;
+  }
+  
+ .nav-menu {
+  flex-wrap: nowrap; /* Prevent wrapping */
+  overflow-x: auto;  /* Allow scrolling if items too long */
+  -webkit-overflow-scrolling: touch; /* smooth scroll on iOS */
+  padding: 5px 8px; /* extra space so glow is not cut off */
+}
+
+  .nav-menu li a {
+    font-size: 12px;
+    padding: 2px 5px;
+    white-space: nowrap; /* Prevent line break */
+  }
+  
+  /* Schedule (More Button) Animation */
+.more-btn a {
+  font-weight: 700;
+  color: #fff;
+  background: #ff6600;
+  padding: 3px 7px;
+  border-radius: 6px;
+  position: relative;
+  /* overflow: hidden;  <-- REMOVE this */
+  animation: pulseGlow 2s infinite;
+  transition: all 0.3s ease;
+}
+
+
+/* Pulse Glow Animation */
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 0px rgba(255, 102, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 6px rgba(255, 102, 0, 0.9), 
+                0 0 10px rgba(255, 102, 0, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 0px rgba(255, 102, 0, 0.5);
+  }
+}
+
+
+  
+}
+
+  
+  .contentsection {
+	  
+	  padding: 20px;
+	  margin: 20px auto;
+	  
+  }
 
 /* Table container */
 .table-container {
   width: 95%;
   margin: 2rem auto;
-  overflow-x: hidden; /* hide scroll */
+  overflow-x: auto;
+  padding-bottom: 1rem;
 }
 
+/* Table */
 table {
   width: 100%;
   border-collapse: collapse;
   background: #fff;
-  border-radius: 10px;
+  
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  table-layout: fixed; /* important for responsive column widths */
+  table-layout: fixed;
+  overflow: hidden;
 }
 
 /* Table headers */
 th {
-  background: #0077cc;
+  background: #2e6c6d;
   color: #fff;
   font-weight: 600;
   padding: 12px;
-
   font-size: 0.95rem;
   word-wrap: break-word;
   text-align: center;
@@ -54,7 +235,7 @@ td {
   text-align: center;
   border-bottom: 1px solid #e0e0e0;
   font-size: 0.9rem;
-  word-wrap: break-word; /* wrap long text */
+  word-wrap: break-word;
   overflow-wrap: break-word;
 }
 
@@ -68,44 +249,6 @@ tbody tr:hover {
   transform: scale(1.01);
   transition: all 0.2s ease-in-out;
 }
-
-
-/* Loader */
-#loading {
-  margin: 40px auto;
-  text-align: center;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #ff6600;
-}
-
-.spinner {
-  border: 4px solid rgba(255,255,255,0.2);
-  border-top: 4px solid #ff6600;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  animation: spin 1s linear infinite;
-  margin: 0 auto 10px auto;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-
-/* Fade-in animation for table */
-#matches-table {
-  display: none;
-  animation: fadeIn 0.8s ease-in-out forwards;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
 
 /* Watch button */
 a.watch-btn {
@@ -133,6 +276,31 @@ footer {
   text-align: center;
   padding: 1rem;
   margin-top: 2rem;
+  border-radius: 0 0 10px 10px;
+}
+
+/* Loader */
+#loading {
+  margin: 40px auto;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ff6600;
+}
+
+.spinner {
+  border: 4px solid rgba(255,255,255,0.2);
+  border-top: 4px solid #ff6600;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 10px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 /* Mobile adjustments */
@@ -148,5 +316,13 @@ footer {
   }
 }
 
+/* Fade-in animation for table */
+#matches-table {
+  display: none;
+  animation: fadeIn 0.8s ease-in-out forwards;
+}
 
-
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

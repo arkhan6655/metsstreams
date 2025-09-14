@@ -2,6 +2,7 @@
 body {
   margin: 0;
   font-family: arial;
+	line-height: 1.5;
  background: #111;
   color: #fff;
   
@@ -404,6 +405,7 @@ background: #ff8533;
   color: #fff;
   transform: scale(1.05);
 }
+
 
 
 

@@ -7,7 +7,7 @@ body {
   color: #fff;
 }
 
-a {
+body a {
 color: #ff4747;
 
   
@@ -534,5 +534,6 @@ section h2 {
     font-size: 13px;
   }
 }
+
 
 

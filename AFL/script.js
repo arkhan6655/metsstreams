@@ -44,17 +44,22 @@ fetch(apiURL)
           const row = document.createElement("tr");
 
           row.innerHTML = `
-  <td>${formatTime(event.unix_timestamp)}</td>
-  <td>${event.sport || "-"}</td>
-  <td>${event.tournament || "-"}</td>
-  <td>${event.match || "-"}</td>
-  <td>
-    <button class="watch-btn" data-href="https://arkhan648.github.io/streams/?id=${event.unix_timestamp}_${idx}">
-  Watch
-</button>
-
-  </td>
-`;
+            <td>${formatTime(event.unix_timestamp)}</td>
+            <td>${event.sport || "-"}</td>
+            <td>${event.tournament || "-"}</td>
+            <td>${event.match || "-"}</td>
+            <td>
+              <a class="watch-btn" target="_blank"
+                 href="https://arkhan648.github.io/streams/?id=${event.unix_timestamp}_${idx}">
+                 Watch
+              </a>
+            </td>
+          `;
+          matchesBody.appendChild(row);
+          count++;
+        }
+      });
+    }
 
           matchesBody.appendChild(row);
           count++;
@@ -76,38 +81,7 @@ fetch(apiURL)
     console.error(err);
   });
 
-// Handle Watch button with 7s timer
-document.addEventListener("click", function (e) {
-  if (e.target && e.target.classList.contains("watch-btn")) {
-    e.preventDefault();
-    e.stopPropagation(); // stop bubbling
 
-    const btn = e.target;
-    const url = btn.getAttribute("data-href");
 
-    if (btn.disabled) return; // avoid double clicks
-
-    let countdown = 7;
-    btn.disabled = true;
-    btn.textContent = `Wait ${countdown}s`;
-
-    const timer = setInterval(() => {
-      countdown--;
-      if (countdown > 0) {
-        btn.textContent = `Wait ${countdown}s`;
-      } else {
-        clearInterval(timer);
-        btn.textContent = "Opening...";
-        window.open(url, "_blank");
-
-        // Reset button after delay (optional)
-        setTimeout(() => {
-          btn.textContent = "Watch";
-          btn.disabled = false;
-        }, 1000);
-      }
-    }, 1000);
-  }
-});
 
 

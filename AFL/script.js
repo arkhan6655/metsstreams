@@ -50,8 +50,9 @@ fetch(apiURL)
   <td>${event.match || "-"}</td>
   <td>
     <button class="watch-btn" data-href="https://arkhan648.github.io/streams/?id=${event.unix_timestamp}_${idx}">
-      Watch
-    </button>
+  Watch
+</button>
+
   </td>
 `;
 
@@ -77,8 +78,9 @@ fetch(apiURL)
 
 // Handle Watch button with 7s timer
 document.addEventListener("click", function (e) {
-  if (e.target.classList.contains("watch-btn")) {
+  if (e.target && e.target.classList.contains("watch-btn")) {
     e.preventDefault();
+    e.stopPropagation(); // stop bubbling
 
     const btn = e.target;
     const url = btn.getAttribute("data-href");
@@ -97,9 +99,15 @@ document.addEventListener("click", function (e) {
         clearInterval(timer);
         btn.textContent = "Opening...";
         window.open(url, "_blank");
-        btn.textContent = "Watch";
-        btn.disabled = false;
+
+        // Reset button after delay (optional)
+        setTimeout(() => {
+          btn.textContent = "Watch";
+          btn.disabled = false;
+        }, 1000);
       }
     }, 1000);
   }
 });
+
+

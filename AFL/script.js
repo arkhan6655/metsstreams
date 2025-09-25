@@ -74,7 +74,7 @@ fetch(apiURL)
 
           // Start at 10 seconds visible to user
           let seconds = 10;
-          countdownEl.textContent = `Watch in ${seconds}s`;
+          countdownEl.textContent = `Wait ${seconds}s`;
 
           const interval = setInterval(() => {
             seconds--;
@@ -104,3 +104,4 @@ fetch(apiURL)
     loadingDiv.innerHTML = `<p style="color:red;">⚠ Error loading matches</p>`;
     console.error(err);
   });
+

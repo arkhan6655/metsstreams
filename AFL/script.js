@@ -79,7 +79,7 @@ fetch(apiURL)
           const interval = setInterval(() => {
             seconds--;
             if (seconds > 0) {
-              countdownEl.textContent = `Watch in ${seconds}s`;
+              countdownEl.textContent = `Wait ${seconds}s`;
             } else {
               clearInterval(interval);
               // Remove countdown text and reveal the link (so only the button remains)
@@ -104,4 +104,5 @@ fetch(apiURL)
     loadingDiv.innerHTML = `<p style="color:red;">⚠ Error loading matches</p>`;
     console.error(err);
   });
+
 

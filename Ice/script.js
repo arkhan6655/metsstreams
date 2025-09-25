@@ -4,7 +4,7 @@ const matchesTable = document.getElementById("matches-table");
 const loadingDiv = document.getElementById("loading");
 
 // Keyword filter
-const keyword = "Ice"; // Change as needed
+const keyword = "Ice Hockey"; // Change as needed
 const now = Math.floor(Date.now() / 1000); // Current timestamp in seconds
 const cutoff = 6 * 60 * 60; // 6 hours
 

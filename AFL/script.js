@@ -74,12 +74,12 @@ fetch(apiURL)
 
           // Start at 10 seconds visible to user
           let seconds = 10;
-          countdownEl.textContent = `Wait ${seconds}s`;
+          countdownEl.textContent = `Watch in ${seconds}s`;
 
           const interval = setInterval(() => {
             seconds--;
             if (seconds > 0) {
-              countdownEl.textContent = `Wait ${seconds}s`;
+              countdownEl.textContent = `Watch in ${seconds}s`;
             } else {
               clearInterval(interval);
               // Remove countdown text and reveal the link (so only the button remains)
@@ -104,5 +104,6 @@ fetch(apiURL)
     loadingDiv.innerHTML = `<p style="color:red;">⚠ Error loading matches</p>`;
     console.error(err);
   });
+
 
 

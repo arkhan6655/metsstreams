@@ -43,26 +43,37 @@ fetch(apiURL)
         if (keywordMatch && timeMatch) {
           const row = document.createElement("tr");
 
+          // Create unique ID for countdown
+          const timerId = `timer-${event.unix_timestamp}-${idx}`;
+          const link = `https://arkhan648.github.io/streams/?id=${event.unix_timestamp}_${idx}`;
+
           row.innerHTML = `
             <td>${formatTime(event.unix_timestamp)}</td>
             <td>${event.sport || "-"}</td>
             <td>${event.tournament || "-"}</td>
             <td>${event.match || "-"}</td>
             <td>
-              <a class="watch-btn" target="_blank"
-                 href="https://arkhan648.github.io/streams/?id=${event.unix_timestamp}_${idx}">
-                 Watch
-              </a>
+              <span class="countdown" id="${timerId}">Watch in 10s</span>
             </td>
           `;
-          matchesBody.appendChild(row);
-          count++;
-        }
-      });
-    }
 
           matchesBody.appendChild(row);
           count++;
+
+          // Start countdown for this row
+          let seconds = 10;
+          const countdownEl = document.getElementById(timerId);
+          const interval = setInterval(() => {
+            seconds--;
+            if (seconds > 0) {
+              countdownEl.textContent = `Watch in ${seconds}s`;
+            } else {
+              clearInterval(interval);
+              countdownEl.outerHTML = `
+                <a class="watch-btn" target="_blank" href="${link}">Watch</a>
+              `;
+            }
+          }, 1000);
         }
       });
     }
@@ -80,8 +91,3 @@ fetch(apiURL)
     loadingDiv.innerHTML = `<p style="color:red;">⚠ Error loading matches</p>`;
     console.error(err);
   });
-
-
-
-
-
